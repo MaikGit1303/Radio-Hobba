@@ -13,16 +13,115 @@
 }
 
 body {
-  background: url('../img/hh.png') no-repeat center center fixed;
-  background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  position: relative;
+  background: url('../img/hh.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+#site-header {
+  background-color: #00796b;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#main-container {
+  max-width: 900px;
+  margin: 80px auto 20px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#radio-tuner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#radio-tuner label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #004d40;
+}
+
+#band-select, #frequency-range, #music-list {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+#band-select:focus, #frequency-range:focus, #music-list:focus {
+  border-color: #00bcd4;
+}
+
+#frequency-display {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #00796b;
+}
+
+#play-music-btn {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  max-width: 150px;
+  align-self: flex-start;
+}
+
+#play-music-btn:hover {
+  background-color: #0097a7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #main-container {
+    margin: 80px 10px 20px 10px;
+    padding: 15px 20px;
+  }
+  #site-header {
+    font-size: 1.5rem;
+  }
 }
 
 body::before {
@@ -64,7 +163,8 @@ body::before {
 }
 
 #login-container input {
-  width: 250px;
+  max-width: 250px;
+  width: 90%;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -76,7 +176,8 @@ body::before {
 
 /* Diseño del boton Entrar*/
 #login-btn {
-  width: 250px;
+  max-width: 250px;
+  width: 90%;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -101,7 +202,8 @@ body::before {
 }
 
 #register-btn {
-  width: 250px;
+  max-width: 250px;
+  width: 90%;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -180,4 +282,76 @@ body::before {
   color: #39b1f7;
 }
 
-/* TIENDA */
+/* Estilos para el reproductor de radio como barra fija abajo a la derecha y más pequeña */
+#radio-player {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 220px;
+  background: linear-gradient(145deg, #111, #2222);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 15px #00ffcc;
+  color: #00ffcc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+#radio-player button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #00ffcc;
+  margin: 0 3px;
+  transition: transform 0.2s;
+}
+
+#radio-player button:hover {
+  transform: scale(1.2);
+}
+
+#radio-player input[type="range"] {
+  width: 90px;
+  accent-color: #00ffcc;
+  margin-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #login-container {
+    padding: 0 20px;
+  }
+  #login-container h2 {
+    font-size: 24px;
+  }
+  #login-container input,
+  #login-btn,
+  #register-btn {
+    width: 100%;
+  }
+  #radio-player {
+    width: 95%;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  #login-container input,
+  #login-btn,
+  #register-btn {
+      width: 90%;
+  }
+
+  #radio-player {
+    width: 90%;
+    right: 5px;
+    bottom: 5px;
+  }
+}

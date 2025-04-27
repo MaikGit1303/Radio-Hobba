@@ -1,18 +1,29 @@
-const audio = document.getElementById("intro-audio");
+const radioAudio = document.getElementById("radio-audio");
+const playPauseBtn = document.getElementById("play-pause-btn");
 const muteBtn = document.getElementById("mute-btn");
 const volumeSlider = document.getElementById("volume-slider");
 
-if (audio) {
-    audio.volume = 0.5;
+if (radioAudio) {
+    radioAudio.volume = 0.5;
+
+    playPauseBtn.addEventListener("click", () => {
+        if (radioAudio.paused) {
+            radioAudio.play();
+            playPauseBtn.textContent = "⏸️";
+        } else {
+            radioAudio.pause();
+            playPauseBtn.textContent = "▶️";
+        }
+    });
 
     muteBtn.addEventListener("click", () => {
-        audio.muted = !audio.muted;
-        muteBtn.textContent = audio.muted ? "🔇" : "🔊";
+        radioAudio.muted = !radioAudio.muted;
+        muteBtn.textContent = radioAudio.muted ? "🔇" : "🔊";
     });
 
     volumeSlider.addEventListener("input", () => {
-        audio.volume = volumeSlider.value;
-        audio.muted = false;
+        radioAudio.volume = volumeSlider.value;
+        radioAudio.muted = false;
         muteBtn.textContent = "🔊";
     });
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +15,15 @@
         <input type="text" id="username" placeholder="Usuario">
         <input type="password" id="password" placeholder="Contraseña">
         <button id="login-btn">Entrar</button>
-<a href="register.html" id="register-btn" class="btn-link">Registrarse</a>
+        <a href="register.html" id="register-btn" class="btn-link">Registrarse</a>
         <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>
         <p>&COPY;2025 HABBUS</p>
     </div>
 
-    <div id="audio-controls">
+    <!-- Radio Player -->
+    <div id="radio-player">
+        <audio id="radio-audio" src="http://streaming-url-de-tu-radio" preload="none"></audio>
+        <button id="play-pause-btn">▶️</button>
         <button id="mute-btn">🔊</button>
         <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
     </div>
