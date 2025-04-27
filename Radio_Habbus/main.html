@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Radio Principal</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Virtual</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header id="site-header">
-        <h1>Radio Habbus</h1>
+    <header class="header">
+        <div class="logo">
+            <h1>Radio Habbus</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Programación</a></li>
+                <li><a href="#">Locutores</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <main class="main-content">
+        <section class="player-section">
+            <h2>Ahora en Vivo</h2>
+            <div class="player">
+                <img src="img/cover.jpg" alt="Portada del programa" class="cover">
+                <audio controls>
+                    <source src="audio/stream.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="song-info">
+                    <h3>Nombre del Programa</h3>
+                    <p>Locutor: Aless</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-schedule">
+            <h2>Programación</h2>
+            <ul class="schedule-list">
+                <li>
+                    <span>08:00 - 10:00</span> | Despecho
+                </li>
+                <li>
+                    <span>10:00 - 12:00</span> | Sad
+                </li>
+                <li>
+                    <span>12:00 - 14:00</span> | Tristesa
+                </li>
+                <li>
+                    <span>14:00 - 16:00</span> | Clásicos de Siempre
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Radio Habbus - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>

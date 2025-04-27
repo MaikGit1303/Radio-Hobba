@@ -1,99 +1,152 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background: #f5f5f5;
-  color: #333;
+  box-sizing: border-box;
 }
 
-#site-header {
-  background-color: #00796b;
-  color: white;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+/* Tipografía general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-#main-container {
-  max-width: 900px;
-  margin: 80px auto 20px auto;
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  min-height: calc(100vh - 120px);
+/* Header */
+.header {
+  background-color: #1f1f1f;
+  padding: 20px 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
-#radio-tuner {
-  width: 100%;
+.logo h1 {
+  font-size: 28px;
+  color: #ff5c5c;
+}
+
+.navigation ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-#radio-tuner label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #004d40;
+.navigation a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-#band-select, #frequency-range, #music-list {
-  padding: 8px 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.3s ease;
+.navigation a:hover {
+  color: #ff5c5c;
+}
+
+/* Main content */
+.main-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Player Section */
+.player-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.player-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.player {
+  background-color: #1f1f1f;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.cover {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+audio {
   width: 100%;
-  max-width: 400px;
+  margin-top: 20px;
 }
 
-#band-select:focus, #frequency-range:focus, #music-list:focus {
-  border-color: #00bcd4;
+.song-info {
+  margin-top: 20px;
 }
 
-#frequency-display {
+.song-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.song-info p {
+  font-size: 18px;
+  color: #bbbbbb;
+}
+
+/* Program Schedule */
+.program-schedule h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.schedule-list li {
+  background-color: #1f1f1f;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.schedule-list li span {
   font-weight: bold;
-  margin-top: 5px;
-  color: #00796b;
+  color: #ff5c5c;
 }
 
-#play-music-btn {
-  background-color: #00bcd4;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  max-width: 150px;
-  align-self: flex-start;
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  color: #aaaaaa;
 }
 
-#play-music-btn:hover {
-  background-color: #0097a7;
-}
-
-/* Responsive adjustments */
+/* Responsivo */
 @media (max-width: 768px) {
-  #main-container {
-    margin: 80px 10px 20px 10px;
-    padding: 15px 20px;
+  .navigation ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
   }
-  #site-header {
-    font-size: 1.5rem;
+
+  .cover {
+      width: 200px;
+      height: 200px;
   }
 }
