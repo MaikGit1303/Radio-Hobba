@@ -3,61 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Virtual</title>
+    <title>Radio Gamer</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header class="header">
         <div class="logo">
-            <h1>Radio Habbus</h1>
+            <h1>🎮 Radio Habbus</h1>
         </div>
-        <nav class="navigation">
+        
+        <!-- Botón Hamburguesa -->
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menú de Navegación -->
+        <nav class="navigation" id="navigation">
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Programación</a></li>
-                <li><a href="#">Locutores</a></li>
+                <li><a href="#">En Vivo</a></li>
+                <li><a href="#">Programas</a></li>
+                <li><a href="#">Team</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main class="main-content">
-        <section class="player-section">
-            <h2>Ahora en Vivo</h2>
-            <div class="player">
-                <img src="img/cover.jpg" alt="Portada del programa" class="cover">
-                <audio controls>
-                    <source src="audio/stream.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-                <div class="song-info">
-                    <h3>Nombre del Programa</h3>
-                    <p>Locutor: Aless</p>
+        <div class="live-container">
+            
+            <!-- Sección Ahora en Vivo -->
+            <section class="player-section">
+                <h2>🔥 Ahora en Vivo 🔥</h2>
+                <div class="player">
+                    <img src="assets/img/logo.png" alt="Habbus" class="cover">
+                    <audio controls>
+                        <source src="audio/stream.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <div class="song-info">
+                        <h3>Habbus 24/7</h3>
+                        <p>DJ Aless</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="program-schedule">
-            <h2>Programación</h2>
-            <ul class="schedule-list">
-                <li>
-                    <span>08:00 - 10:00</span> | Despecho
-                </li>
-                <li>
-                    <span>10:00 - 12:00</span> | Sad
-                </li>
-                <li>
-                    <span>12:00 - 14:00</span> | Tristesa
-                </li>
-                <li>
-                    <span>14:00 - 16:00</span> | Clásicos de Siempre
-                </li>
-            </ul>
-        </section>
+            <!-- Sección Programación en Vivo -->
+
+        </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2025 Radio Habbus - Todos los derechos reservados</p>
+        <p>&copy; 2025 Radio Habbus - By Aless</p>
     </footer>
+
+    <!-- SCRIPT del menú hamburguesa -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navigation = document.getElementById('navigation');
+
+        hamburger.addEventListener('click', () => {
+            navigation.classList.toggle('show');
+        });
+    </script>
+
 </body>
 </html>

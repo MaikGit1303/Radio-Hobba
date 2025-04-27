@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
   background: url('../img/hh.png') no-repeat center center fixed;
   background-size: cover;
-  color: #333;
+  color: #222222;
 }
 
 body::before {
@@ -353,5 +353,44 @@ body::before {
     width: 90%;
     right: 5px;
     bottom: 5px;
+  }
+}
+
+/* New styles for side-by-side layout of player and program schedule */
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.player-section {
+  flex: 1 1 60%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.program-schedule {
+  flex: 1 1 35%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-height: fit-content;
+  overflow-y: auto;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .player-section, .program-schedule {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
   }
 }

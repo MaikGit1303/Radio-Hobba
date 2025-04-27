@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programas - Radio Habbus</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <h1>🎮 Radio Habbus</h1>
+        </div>
+        <!-- Botón Hamburguesa -->
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- Menú de Navegación -->
+        <nav class="navigation" id="navigation">
+            <ul>
+                <li><a href="main.html">Inicio</a></li>
+                <li><a href="#">En Vivo</a></li>
+                <li><a href="programas.html" class="active">Programas</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <section class="program-schedule">
+            <h2>🎙️ Programación En Vivo</h2>
+            <ul class="schedule-list">
+                <li><span>06:00 - 08:00</span> | Wake Up & Play</li>
+                <li><span>08:00 - 12:00</span> | Gaming Hits</li>
+                <li><span>12:00 - 16:00</span> | Battle Soundtrack</li>
+                <li><span>16:00 - 22:00</span> | Night Raid</li>
+                <li><span>22:00 - 02:00</span> | Chill Mode</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Radio Habbus - By Aless</p>
+    </footer>
+
+    <!-- SCRIPT del menú hamburguesa -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navigation = document.getElementById('navigation');
+
+        hamburger.addEventListener('click', () => {
+            navigation.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

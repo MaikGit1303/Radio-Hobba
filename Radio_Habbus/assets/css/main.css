@@ -1,152 +1,197 @@
 /* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Tipografía general */
+/* Tipografía principal */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  line-height: 1.6;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #00ffea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url(../img/hh.png);
 }
 
 /* Header */
 .header {
-  background-color: #1f1f1f;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: linear-gradient(90deg, #00ffea 0%, #00ffaa 100%);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px #00ffea;
 }
 
 .logo h1 {
-  font-size: 28px;
-  color: #ff5c5c;
+    font-size: 32px;
+    color: #0d0d0d;
 }
 
 .navigation ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 .navigation a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .navigation a:hover {
-  color: #ff5c5c;
+    color: #ffffff;
 }
 
 /* Main content */
 .main-content {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
+    flex: 1;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex; /* Añadimos flex para alinear las secciones */
+    flex-wrap: wrap; /* Permitimos que se envuelvan en pantallas pequeñas */
+    justify-content: space-around; /* Espaciado entre las secciones */
+    align-items: flex-start; /* Alineamos las secciones en la parte superior */
 }
 
 /* Player Section */
 .player-section {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.player-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px; /* Reducimos un poco el margen inferior */
+    flex-basis: calc(50% - 20px); /* Ocuparán aproximadamente la mitad del ancho */
+    max-width: 550px; /* Limitamos el ancho máximo */
 }
 
 .player {
-  background-color: #1f1f1f;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    background: #1a1a1a;
+    padding: 40px;
+    border: 2px solid #00ffea;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #00ffaa;
+    position: relative;
 }
 
 .cover {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 20px;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px #00ffea;
 }
 
 audio {
-  width: 100%;
-  margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 10px #00ffaa);
 }
 
 .song-info {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .song-info h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+    font-size: 26px;
+    color: #ffffff;
+    text-shadow: 0 0 8px #00ffaa;
+    margin-bottom: 10px;
 }
 
 .song-info p {
-  font-size: 18px;
-  color: #bbbbbb;
+    font-size: 20px;
+    color: #cccccc;
 }
 
 /* Program Schedule */
+.program-schedule {
+    flex-basis: calc(50% - 20px); /* Ocuparán aproximadamente la mitad del ancho */
+    max-width: 550px; /* Limitamos el ancho máximo */
+    margin-bottom: 40px; /* Añadimos un margen inferior similar */
+}
+
 .program-schedule h2 {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 20px;
+    font-size: 32px;
+    text-align: left; /* Alineamos el título a la izquierda */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffaa;
 }
 
 .schedule-list {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: auto;
+    list-style: none;
+    padding: 0;
+    /* max-width: 700px; Eliminamos el ancho máximo aquí */
+    margin: 0; /* Ajustamos el margen */
 }
 
 .schedule-list li {
-  background-color: #1f1f1f;
-  margin: 10px 0;
-  padding: 15px 20px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    background-color: #1a1a1a;
+    margin: 10px 0;
+    padding: 20px;
+    border: 2px solid #00ffea;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    box-shadow: 0 0 10px #00ffaa;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.schedule-list li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #00ffaa, 0 0 30px #00ffaa;
 }
 
 .schedule-list li span {
-  font-weight: bold;
-  color: #ff5c5c;
+    font-weight: bold;
+    color: #00ffea;
 }
 
 /* Footer */
 .footer {
-  background-color: #1f1f1f;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  margin-top: 40px;
-  color: #aaaaaa;
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #00ffea;
+    margin-top: 40px;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .navigation ul {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-  }
+    .main-content {
+        flex-direction: column; /* Volvemos a la disposición vertical en pantallas pequeñas */
+        align-items: center; /* Centramos los elementos */
+    }
 
-  .cover {
-      width: 200px;
-      height: 200px;
-  }
+    .player-section,
+    .program-schedule {
+        flex-basis: 100%; /* Ocuparán todo el ancho en pantallas pequeñas */
+        max-width: none; /* Eliminamos el ancho máximo */
+        margin-bottom: 30px; /* Ajustamos el margen inferior */
+    }
+
+    .program-schedule h2 {
+        text-align: center; /* Centramos el título en pantallas pequeñas */
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cover {
+        width: 220px;
+        height: 220px;
+    }
 }
