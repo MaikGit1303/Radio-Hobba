@@ -9,7 +9,7 @@
 body {
     font-family: 'Orbitron', sans-serif;
     background-color: #000000;
-    color: #00ffea;
+    color: #ff0000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,12 +20,12 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(90deg, #00ffea 0%, #00ffaa 100%);
+    background: linear-gradient(90deg, #ff0000 0%, #aa0000 100%);
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 20px #00ffea;
+    box-shadow: 0 0 20px #ff0000;
 }
 
 .logo h1 {
@@ -74,9 +74,9 @@ body {
 .player {
     background: rgba(26, 26, 26, 0.5);
     padding: 40px;
-    border: 2px solid #00ffea;
+    border: 2px solid #ff0000;
     border-radius: 20px;
-    box-shadow: 0 0 15px #00ffaa;
+    box-shadow: 0 0 15px #aa0000;
     position: relative;
 }
 
@@ -86,7 +86,7 @@ body {
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px #00ffea;
+    box-shadow: 0 0 20px #ff0000;
 }
 
 audio {
@@ -102,7 +102,7 @@ audio {
 .song-info h3 {
     font-size: 26px;
     color: #ffffff;
-    text-shadow: 0 0 8px #00ffaa;
+    text-shadow: 0 0 8px #aa0000;
     margin-bottom: 10px;
 }
 
@@ -122,7 +122,7 @@ audio {
     font-size: 32px;
     text-align: left; /* Alineamos el título a la izquierda */
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffaa;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #aa0000;
 }
 
 .schedule-list {
@@ -136,11 +136,11 @@ audio {
     background-color: #1a1a1a;
     margin: 10px 0;
     padding: 20px;
-    border: 2px solid #00ffea;
+    border: 2px solid #ff0000;
     border-radius: 15px;
     font-size: 20px;
     color: #ffffff;
-    box-shadow: 0 0 10px #00ffaa;
+    box-shadow: 0 0 10px #aa0000;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -149,7 +149,7 @@ audio {
 
 .schedule-list li:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 20px #00ffaa, 0 0 30px #00ffaa;
+    box-shadow: 0 0 20px #aa0000, 0 0 30px #aa0000;
 }
 
 .schedule-list li span {
@@ -164,7 +164,7 @@ audio {
     padding: 20px;
     font-size: 14px;
     color: #555;
-    border-top: 1px solid #00ffea;
+    border-top: 1px solid #ff0000;
     margin-top: 40px;
 }
 
@@ -173,12 +173,12 @@ audio {
     flex-basis: calc(50% - 20px);
     max-width: 400px;
     background: rgba(26, 26, 26, 0.5);
-    border: 2px solid #00ffea;
+    border: 2px solid #ff0000;
     border-radius: 20px;
-    box-shadow: 0 0 15px #00ffaa;
+    box-shadow: 0 0 15px #aa0000;
     padding: 20px;
     margin-left: 20px;
-    color: #00ffea;
+    color: #ff0000;
     display: flex;
     flex-direction: column;
     align-items: center;
