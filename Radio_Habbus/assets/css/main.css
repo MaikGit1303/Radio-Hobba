@@ -8,12 +8,14 @@
 /* Tipografía principal */
 body {
     font-family: 'Orbitron', sans-serif;
-    background-color: #0d0d0d;
+    background-color: #000000;
     color: #00ffea;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url(../img/hh.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hh.png);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Header */
@@ -70,7 +72,7 @@ body {
 }
 
 .player {
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.5);
     padding: 40px;
     border: 2px solid #00ffea;
     border-radius: 20px;
@@ -166,6 +168,83 @@ audio {
     margin-top: 40px;
 }
 
+/* Discord Window */
+.discord-window {
+    flex-basis: calc(50% - 20px);
+    max-width: 400px;
+    background: rgba(26, 26, 26, 0.5);
+    border: 2px solid #00ffea;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #00ffaa;
+    padding: 20px;
+    margin-left: 20px;
+    color: #00ffea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discord-window iframe {
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    border: none;
+}
+
+.discord-join-btn {
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 10px 20px;
+    background-color: #5865F2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.discord-join-btn:hover {
+    background-color: #4752c4;
+    text-decoration: none;
+}
+
+.discord-window h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.discord-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.discord-window iframe {
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    border: none;
+}
+
+.discord-join-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5865F2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.discord-join-btn:hover {
+    background-color: #4752c4;
+    text-decoration: none;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .main-content {
@@ -193,5 +272,42 @@ audio {
     .cover {
         width: 220px;
         height: 220px;
+    }
+
+    .discord-window {
+        flex-basis: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+.live-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.player-section, .discord-window {
+    flex: 1;
+    min-width: 250px;
+    max-width: 450px;
+}
+
+.discord-window iframe {
+    width: 250px;
+    height: 350px;
+}
+
+.discord-join-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .live-container {
+        flex-direction: column;
     }
 }
